@@ -22,14 +22,14 @@ let displayLink = document.querySelector(".display-link");
 
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
-let image = ["https://i.scdn.co/image/ab67616d0000b273c4a4a8f9190656455b6bf8c3"
-            "https://i.ytimg.com/vi/N3472Q6kvg0/maxresdefault.jpg"
+let image = ["https://i.scdn.co/image/ab67616d0000b273c4a4a8f9190656455b6bf8c3",
+            "https://i.ytimg.com/vi/N3472Q6kvg0/maxresdefault.jpg",
              "https://i1.sndcdn.com/artworks-0PxvzqyLGoWS2p0w-uFIOSA-t500x500.jpg"]
  let songNames = ["bury the light", "rules of nature", "rage beaneath the mountains"]
  let artist = ["Casey Edwards", "Jamie Christopherson", "Hoyo-mix" ]
- let songLinks = [ "https://www.youtube.com/watch?v=Jrg9KxGNeJY"
-                 "https://www.youtube.com/watch?v=N3472Q6kvg0"
-                 "https://www.youtube.com/watch?v=tIq41I2WT70"
+ let songLinks = [ "https://www.youtube.com/watch?v=Jrg9KxGNeJY",
+                 "https://www.youtube.com/watch?v=N3472Q6kvg0",
+                 "https://www.youtube.com/watch?v=tIq41I2WT70",]
                    
 
 
@@ -78,7 +78,7 @@ function emptyDisplay() {
 function displaySongInfo() {
 
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
-
+for (let image of image)
 
 
 }
