@@ -22,12 +22,12 @@ let displayLink = document.querySelector(".display-link");
 
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
-let songImage = ["https://i.scdn.co/image/ab67616d0000b273c4a4a8f9190656455b6bf8c3", "https://i.ytimg.com/vi/N3472Q6kvg0/maxresdefault.jpg", "https://i1.sndcdn.com/artworks-0PxvzqyLGoWS2p0w-uFIOSA-t500x500.jpg"];
- let songNames = ["bury the light", "rules of nature", "rage beaneath the mountains"];
- let songArtist = ["Casey Edwards", "Jamie Christopherson", "Hoyo-mix" ];
- let songLinks = [ "https://www.youtube.com/watch?v=Jrg9KxGNeJY",
-                 "https://www.youtube.com/watch?v=N3472Q6kvg0",
-                 "https://www.youtube.com/watch?v=tIq41I2WT70"];
+//let songImage = ["https://i.scdn.co/image/ab67616d0000b273c4a4a8f9190656455b6bf8c3", "https://i.ytimg.com/vi/N3472Q6kvg0/maxresdefault.jpg", "https://i1.sndcdn.com/artworks-0PxvzqyLGoWS2p0w-uFIOSA-t500x500.jpg"];
+// let songNames = ["bury the light", "rules of nature", "rage beaneath the mountains"];
+//  let songArtist = ["Casey Edwards", "Jamie Christopherson", "Hoyo-mix" ];
+//  let songLinks = [ "https://www.youtube.com/watch?v=Jrg9KxGNeJY",
+//                  "https://www.youtube.com/watch?v=N3472Q6kvg0",
+//                  "https://www.youtube.com/watch?v=tIq41I2WT70"];
                    
 
 
@@ -36,6 +36,10 @@ let songImage = ["https://i.scdn.co/image/ab67616d0000b273c4a4a8f9190656455b6bf8
 //REFACTOR ARRAYS DAY 
 // task 11: comment out the arrays data.
 // task 12: create an object for each of your songs.
+let list = {
+  songimage : songImage
+}
+
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 // task 14: create an array that stores all of the objects.
 
@@ -53,10 +57,15 @@ let songImage = ["https://i.scdn.co/image/ab67616d0000b273c4a4a8f9190656455b6bf8
 function addSongInfo() {
 
 // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
-
-
+let imageInput = image.value;
+let songNameInput = songName.value;
+let artistInput = artist.value;
+let songLinkInput = songLink.value;
 // task 10: use `.push()` to add each input value to the correct array.
-
+songImage.push(imageInput);
+  songNames.push(songNameInput);
+  songArtist.push(artistInput);
+  songLinks.push(songLinkInput);
 }
 
 
