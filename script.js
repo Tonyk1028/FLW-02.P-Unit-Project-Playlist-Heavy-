@@ -36,13 +36,30 @@ let displayLink = document.querySelector(".display-link");
 //REFACTOR ARRAYS DAY 
 // task 11: comment out the arrays data.
 // task 12: create an object for each of your songs.
-let list = {
-  songimage : songImage
-}
+let song1 = {
+  songImage: "https://i.scdn.co/image/ab67616d0000b273c4a4a8f9190656455b6bf8c3",
+  songNames: "bury the light",
+  songArtists: "Casey Edwards",
+  songLinks: "https://www.youtube.com/watch?v=Jrg9KxGNeJY"
+};
+
+let song2 = {
+  songImage: "https://i.ytimg.com/vi/N3472Q6kvg0/maxresdefault.jpg",
+  songNames: "rules of nature",
+  songArtists: "Jamie Christopherson",
+  songLinks: "https://www.youtube.com/watch?v=N3472Q6kvg0"
+};
+
+let song3 = {
+  songImage: "https://i1.sndcdn.com/artworks-0PxvzqyLGoWS2p0w-uFIOSA-t500x500.jpg",
+  songNames: "rage beaneath the mountains",
+  songArtists: "Hoyo-mix",
+  songLinks: "https://www.youtube.com/watch?v=tIq41I2WT70"
+};
 
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 // task 14: create an array that stores all of the objects.
-
+let songList = [song1,song2,song3];
 
 
 //REFACTOR LOOPS DAY 
@@ -57,16 +74,18 @@ let list = {
 function addSongInfo() {
 
 // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
-let imageInput = image.value;
-let songNameInput = songName.value;
-let artistInput = artist.value;
-let songLinkInput = songLink.value;
+let songListInput = {
+imageInput: image.value,
+songNameInput: songName.value,
+artistInput: artist.value,
+songLinkInput: songLink.value,
+};
+  
 // task 10: use `.push()` to add each input value to the correct array.
-songImage.push(imageInput);
-  songNames.push(songNameInput);
-  songArtist.push(artistInput);
-  songLinks.push(songLinkInput);
+
+songList.push(songListInput);
 }
+
 
 
 
