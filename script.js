@@ -2,10 +2,10 @@
 
 
 // input variables
-let image = document.querySelector(".image");
-let songName = document.querySelector(".song-name");
-let artist = document.querySelector(".artist");
-let songLink = document.querySelector(".song-link");
+let songImages = document.querySelector(".image");
+let songNames = document.querySelector(".song-name");
+let songArtists = document.querySelector(".artist");
+let songLinks = document.querySelector(".song-link");
 
 // button variable
 let add = document.querySelector(".add");
@@ -75,10 +75,10 @@ function addSongInfo() {
 
 // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
 let songListInput = {
-imageInput: image.value,
-songNameInput: songName.value,
-artistInput: artist.value,
-songLinkInput: songLink.value,
+songImage: songImages.value,
+songNames: songNames.value,
+songArtists: songArtists.value,
+songLinks: songLinks.value,
 };
   
 // task 10: use `.push()` to add each input value to the correct array.
@@ -105,19 +105,30 @@ function displaySongInfo() {
 
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
-  for (let i = 0; i < songImage.length; i++) {
-displayImage.insertAdjacentHTML("beforeend", `<img src=${songImage[i]}>`);
-}
-for (let i = 0; i < songNames.length; i++) {
-displaySong.insertAdjacentHTML("beforeend", `<p>${songNames[i]}</p>`);
-}
-for (let i = 0; i < songArtist.length; i++) {
-displayArtist.insertAdjacentHTML("beforeend", `<p>${songArtist[i]}</p>`);
-}
-for (let i = 0; i < songLinks.length; i++) {
-displayLink.insertAdjacentHTML("beforeend", `<p>${songLinks[i]}</p>`);
-}
-}
+//   for (let i = 0; i < songImage.length; i++) {
+// displayImage.insertAdjacentHTML("beforeend", `<img src=${songImage[i]}>`);
+// }
+// for (let i = 0; i < songNames.length; i++) {
+// displaySong.insertAdjacentHTML("beforeend", `<p>${songNames[i]}</p>`);
+// }
+// for (let i = 0; i < songArtist.length; i++) {
+// displayArtist.insertAdjacentHTML("beforeend", `<p>${songArtist[i]}</p>`);
+// }
+// for (let i = 0; i < songLinks.length; i++) {
+// displayLink.insertAdjacentHTML("beforeend", `<p>${songLinks[i]}</p>`);
+// }
+  for (let i = 0; i < songList.length; i++){
+    displayImage.insertAdjacentHTML("beforeend", `<img src=${songList[i].songImage}>`);
+
+    displaySong.insertAdjacentHTML("beforeend", `<p>${songList[i].songNames}</p>`);
+
+    displayArtist.insertAdjacentHTML("beforeend", `<p>${songList[i].songArtists}</p>`);
+
+    displayLink.insertAdjacentHTML("beforeend", `<p><a href="${songList[i].songlinks}">Song Here!</a></p>`);
+    }
+  }
+
+
 
 // click event to add and display songs
 add.onclick = function() {
